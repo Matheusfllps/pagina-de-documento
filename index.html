@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Documentação Técnica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <fieldset>
+            <h1>Documentação JS</h1><hr>
+        <nav id="overflow">
+            <a href="">introdução</a><hr>
+            <a href="">O que você já deveria saber</a><hr>
+            <a href="">JavaScript e Java</a><hr>
+            <a href="">olá Mundo</a><hr>
+            <a href="">Variáveis</a><hr>
+            <a href="">Declarando Variáveis</a><hr>
+            <a href="">Escopo Variável</a><hr>
+            <a href="">Variáveis Globais</a><hr>
+            <a href="">Constantes</a><hr>
+
+        </nav>
+    </fieldset>
+    </header>
+    <main><h1>Introdução</h1>
+<p>JavaScript é uma linguagem de script de plataforma cruzada orientada a objetos. É uma linguagem pequena e leve. Dentro de um ambiente host (por exemplo, um navegador da web), o JavaScript pode ser conectado aos objetos de seu ambiente para fornecer controle programático sobre eles.</p>
+
+<p>JavaScript contém uma biblioteca padrão de objetos, como Array, Date e Math, e um conjunto básico de elementos de linguagem, como operadores, estruturas de controle e instruções. O JavaScript básico pode ser estendido para uma variedade de propósitos, complementando-o com objetos adicionais; por exemplo:</p>
+
+<li>O JavaScript do lado do cliente estende a linguagem central, fornecendo objetos para controlar um navegador e seu Document Object Model (DOM). Por exemplo, as extensões do lado do cliente permitem que um aplicativo coloque elementos em um formulário HTML e responda a eventos do usuário, como cliques do mouse, entrada de formulário e navegação de página.</li>
+<li>O JavaScript do lado do servidor estende a linguagem central, fornecendo objetos relevantes para a execução de JavaScript em um servidor. Por exemplo, as extensões do lado do servidor permitem que um aplicativo se comunique com um banco de dados, forneça continuidade de informações de uma chamada para outra do aplicativo ou execute manipulações de arquivo em um servidor.</li>
+<h1>O que você já deveria saber</h1>
+<p>Este guia pressupõe que você tenha os seguintes conhecimentos básicos:</p>
+
+<li>Uma compreensão geral da Internet e da World Wide Web (WWW).</li>
+<li>Bons conhecimentos de HyperText Markup Language (HTML).</li>
+<li>Alguma experiência de programação. Se você é novo em programação, tente um dos tutoriais vinculados na página principal sobre JavaScript.</li>
+<h1>JavaScript e Java</h1>
+<p>JavaScript e Java são semelhantes em alguns aspectos, mas fundamentalmente diferentes em alguns outros. A linguagem JavaScript se assemelha a Java, mas não tem tipagem estática e verificação de tipo forte de Java. O JavaScript segue a maior parte da sintaxe de expressão Java, convenções de nomenclatura e construções básicas de fluxo de controle, razão pela qual foi renomeado de LiveScript para JavaScript.</p>
+
+<p>Em contraste com o sistema de classes de tempo de compilação do Java construído por declarações, o JavaScript oferece suporte a um sistema de tempo de execução baseado em um pequeno número de tipos de dados que representam valores numéricos, booleanos e de string. JavaScript tem um modelo de objeto baseado em protótipo em vez do modelo de objeto baseado em classe mais comum. O modelo baseado em protótipo fornece herança dinâmica; ou seja, o que é herdado pode variar para objetos individuais. JavaScript também oferece suporte a funções sem quaisquer requisitos declarativos especiais. Funções podem ser propriedades de objetos, executando como métodos vagamente tipados.</p>
+
+<p>JavaScript é uma linguagem de formato muito livre em comparação com Java. Você não precisa declarar todas as variáveis, classes e métodos. Você não precisa se preocupar se os métodos são públicos, privados ou protegidos e não precisa implementar interfaces. Variáveis, parâmetros e tipos de retorno de função não são explicitamente digitados.</p>
+
+<h1>Olá Mundo</h1>
+<p>Para começar a escrever JavaScript, abra o Scratchpad e escreva seu primeiro código JavaScript "Hello world" JavaScript code:</p>
+<p>
+    function greetMe (yourName) {alert ("Hello" + yourName); }
+    greetMe ("Mundo");
+</p>
+<p>Selecione o código no teclado e pressione Ctrl + R para vê-lo se desdobrar em seu navegador!</p>
+<h1>Variáveis</h1>
+<p>Você usa variáveis ​​como nomes simbólicos para valores em seu aplicativo. Os nomes das variáveis, chamados identificadores, obedecem a certas regras.</p>
+
+<p>Um identificador JavaScript deve começar com uma letra, sublinhado (_) ou cifrão ($); os caracteres subsequentes também podem ser dígitos (0-9). Como o JavaScript diferencia maiúsculas de minúsculas, as letras incluem os caracteres "A" a "Z" (maiúsculas) e os caracteres "a" a "z" (minúsculas).</p>
+
+<p>Você pode usar letras ISO 8859-1 ou Unicode, como å e ü em identificadores. Você também pode usar as sequências de escape Unicode como caracteres em identificadores. Alguns exemplos de nomes legais são Number_hits, temp99 e _name.</p>
+
+<h1>Declarando variáveis</h1>
+<p>Você pode declarar uma variável de três maneiras:</p>
+<p>Com a palavra-chave var. Por exemplo,</p>
+<p>var x = 42.</p>
+<p>Essa sintaxe pode ser usada para declarar variáveis ​​locais e globais.</p>
+
+<p>Simplesmente atribuindo a ele um valor. Por exemplo,</p>
+<p>x = 42.</p>
+<p>Isso sempre declara uma variável global. Ele gera um aviso de JavaScript estrito. Você não deve usar esta variante.</p>
+
+<p>Com a palavra-chave let. Por exemplo,</p>
+<p>let y = 13.</p>
+<p>Esta sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja Escopo variável abaixo.</p>
+
+<h1>Escopo variável</h1>
+<p>Quando você declara uma variável fora de qualquer função, ela é chamada de variável global, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, ela é chamada de variável local, porque está disponível apenas nessa função.</p>
+
+<p>JavaScript anterior ao ECMAScript 2015 não tem escopo de instrução de bloco; em vez disso, uma variável declarada dentro de um bloco é local para a função (ou escopo global) em que o bloco reside. Por exemplo, o código a seguir registrará 5, porque o escopo de x é a função (ou contexto global) dentro da qual x é declarado, não o bloco, que neste caso é uma instrução if.</p>
+
+<p>if (verdadeiro) {var x = 5; } console.log (x); // 5</p>
+<!-- ksjdlksjhfkdjshfkgsdfgsdhfgsdhfgsdhfgshfajhfgsaja-->
+<p>Este comportamento muda, ao usar a declaração let introduzida no ECMAScript 2015.</p>
+
+<p>
+    if (true) {let y = 5; } console.log (y); // ReferenceError: y não é
+    definiram
+</p>
+<h1>Variáveis ​​globais</h1>
+<p>Variáveis ​​globais são na verdade propriedades do objeto global. Em páginas da web, o objeto global é a janela, portanto, você pode definir e acessar variáveis ​​globais usando a sintaxe window.variable.</p>
+
+<p>Conseqüentemente, você pode acessar variáveis ​​globais declaradas em uma janela ou quadro a partir de outra janela ou quadro, especificando o nome da janela ou quadro. Por exemplo, se uma variável chamada phoneNumber for declarada em um documento, você pode se referir a essa variável em um iframe como parent.phoneNumber.</p>
+
+<h1>Constantes</h1>
+<p>Você pode criar uma constante somente leitura, nomeada com a palavra-chave const. A sintaxe de um identificador de constante é a mesma de um identificador de variável: ele deve começar com uma letra, sublinhado ou cifrão e pode conter caracteres alfabéticos, numéricos ou sublinhados.</p>
+
+<p>const PI = 3,14;</p>
+<p>Uma constante não pode alterar o valor por meio de atribuição ou ser declarada novamente durante a execução do script. Ele deve ser inicializado com um valor.</p>
+
+<p>As regras de escopo para constantes são iguais àquelas para permitir variáveis ​​de escopo de bloco. Se a palavra-chave const for omitida, o identificador será considerado uma variável.</p>
+
+<p>Você não pode declarar uma constante com o mesmo nome de uma função ou variável no mesmo escopo. Por exemplo:</p>
+
+
+<p>
+    // ISSO CAUSARÁ UM ERRO function f () {}; const f = 5; // ISSO VAI
+    CAUSA UM ERRO TAMBÉM função f () {const g = 5; var g; //declarações
+    }
+</p>
+<p>No entanto, os atributos do objeto não são protegidos, portanto, a instrução a seguir é executada sem problemas.</p>
+<p>const MY_OBJECT = {"chave": "valor"}; MY_OBJECT.key = "otherValue";</p>
+<h1>Referência</h1>
+<li>Toda a documentação nesta página é retirada do <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN</a></li>
+</main>
+</body>
+</html>
